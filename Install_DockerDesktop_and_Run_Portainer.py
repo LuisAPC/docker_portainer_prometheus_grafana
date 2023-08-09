@@ -12,7 +12,7 @@ DOCKER=
 
 4. Install Docker desktop
     Once inside go to settings -> Resources -> WSL Integration
-        Enable and aplly & Restart
+        Enable and apply & Restart
 
 5. Go to WSL terminal (Ubuntu) and run a couple commands to verify
     that everything is correct

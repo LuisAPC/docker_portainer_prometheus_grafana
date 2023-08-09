@@ -67,7 +67,7 @@ You can install them on a linux OS, but we are using Docker and Portainer.
 3. In the portainer web UI, selct the portainer server, stacks, add new
 stack.
     Call it monitoring and paste the compose.yaml file
-    It probably won't work yet because we haben't created this configuration
+    It probably won't work yet because we haven't created this configuration
         file for pometheus (if you go the the logs of promeheus container,
         you can see that it fails to open promehteus.yaml)
 
@@ -75,7 +75,7 @@ stack.
         Go to the terminal of your home server
     sudo mkdir /etc/prometheus
         Create folder under etc folder
-    sudo vim /etc/prometheus/prometheus.yaml
+    sudo vim /etc/prometheus/prometheus.yml
         Create config file inside the folder
         Paste content inside the prometheus-config folder and save (this
             file will listen to the data of prometheus itself)
@@ -104,6 +104,7 @@ ADDING MORE METRICS (THIRD-PARTY EXPORTERS)----------------------------------
 For a Linux server, a docker stack, etc.
 Prometheus has a bunch of exporters and integratios that allows us to do that.
 1. The 2 main exporters that will be covered here are:
+
     Node/system metrics exporter (although not recommended to deploy as a
         Docker container because it requires access to the host system)
         The problem with this exporters (that retrieve resourse data, such as

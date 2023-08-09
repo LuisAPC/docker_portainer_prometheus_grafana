@@ -113,7 +113,7 @@ Note: You could also deploy docker compose files in a yaml file via cli
         Agree to terms.
     Click on Save
 
-* If you click on the link, it won’t work right away:
+* If you click on the link, it won't work right away:
     This is because we deployed the nginxproxymanager in a docker
     compose stack. This automatically creates a new network and attach
     the nginxproxymanager to an isolated docker network. The portainer
