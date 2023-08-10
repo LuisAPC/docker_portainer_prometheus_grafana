@@ -131,7 +131,7 @@ Note: You could also deploy docker compose files in a yaml file via cli
             copy the nginxproxymanager_default network.
     - Close the port 9000 (so no one can access it via that way) and
     add the proxy network.
-        docker container run -d -p 8000:8000 --network
+        docker container run -d -p 8000:8000 --network \
              nginxproxymanager_default \
             --name=portainer --restart=always \
             -v /var/run/docker.sock:/var/run/docker.sock \
