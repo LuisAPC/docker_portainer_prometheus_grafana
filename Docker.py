@@ -91,4 +91,10 @@ everything saved.
 
 You can go to hub.docker.com to view all of the available images
 
+To stop all running containers:
+    docker stop $(docker ps -a -q)
+
+to run all containers:
+    docker start $(docker ps -a -q)
+
 """

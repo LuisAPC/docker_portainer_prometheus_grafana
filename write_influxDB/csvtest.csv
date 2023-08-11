@@ -1,0 +1,4 @@
+_time,region,host,usage_user,_measurement
+2018-05-08T20:50:00Z,east,A,15.43,cpu
+2018-05-08T20:50:20Z,east,A,59.25,cpu
+2018-05-08T20:50:40Z,east,A,52.62,cpu
