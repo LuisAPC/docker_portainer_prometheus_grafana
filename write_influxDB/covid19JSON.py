@@ -27,25 +27,23 @@ def prepare_influxdb_comms(url, token, org):
 def send_to_influxdb(df, write_client):
     for row_idx, row in df.iterrows():
         loaded = [{
-            "measurement": "Test1",
-            "tags": {"lookup": row[1]},
+            "measurement": "Test2",
+            "tags": {"Country": row[2]},
             "fields": {
-                "data": {
-                    "Cumulative_cases": row[2],
-                    "lookup": row[1]
-                }
+                "Country_code": row[1],
+                "Cumulative_cases": row[3]
             }
         }]
-        # printer = PrettyPrinter()
-        # printer.pprint(loaded)
-        write_client.write(bucket=bucket, record=loaded)
+    printer = PrettyPrinter()
+    printer.pprint(loaded)
+        # write_client.write(bucket=bucket, record=loaded)
 
 
 def csv_to_json():
 
     df = pd.read_csv('C:/Users/luisp/Desktop/docker_portainer_prometheus_grafana/write_influxDB/WHO-COVID-19-global-data.csv')
     df.drop(
-        ['Country', 'WHO_region', 'New_cases', 'New_deaths', 'Cumulative_deaths'],
+        ['WHO_region', 'New_cases', 'New_deaths', 'Cumulative_deaths'],
         axis=1,
         inplace=True
         )
